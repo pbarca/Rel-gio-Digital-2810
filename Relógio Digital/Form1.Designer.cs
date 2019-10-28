@@ -100,7 +100,7 @@
             this.minutos.TabIndex = 6;
             this.minutos.Text = "Minutos";
             this.minutos.UseVisualStyleBackColor = false;
-            this.minutos.Click += new System.EventHandler(this.minutos_Click);
+            this.minutos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Acerta_Relogio);
             // 
             // segundos
             // 
@@ -124,7 +124,7 @@
             this.horas.TabIndex = 4;
             this.horas.Text = "Horas";
             this.horas.UseVisualStyleBackColor = false;
-            this.horas.Click += new System.EventHandler(this.horas_Click);
+            this.horas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Acerta_Relogio);
             // 
             // Form1
             // 

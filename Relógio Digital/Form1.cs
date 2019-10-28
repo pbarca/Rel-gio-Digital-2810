@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Relógio_Digital
@@ -53,22 +46,13 @@ namespace Relógio_Digital
             timer1.Interval = 1000;
         }
 
-        private void horas_Click(object sender, EventArgs e)
-        {
-            contador += 3600;
-            mostrar();
-        }
-
-        private void minutos_Click(object sender, EventArgs e)
-        {
-            contador += 60;
-            mostrar();
-        }
-
         private void Acerta_Relogio(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) contador++;
-            if (e.Button == MouseButtons.Right) contador--;
+            int valor = 1;
+            if (((Button)sender).Name == "minutos") valor = 60;
+            if (((Button)sender).Name == "horas") valor = 3600;
+            if (e.Button == MouseButtons.Left) contador += valor;
+            if (e.Button == MouseButtons.Right) contador -= valor;
             mostrar();
         }
     }
